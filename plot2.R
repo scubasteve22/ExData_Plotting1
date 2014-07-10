@@ -1,4 +1,4 @@
-# Code to complete the first peer assignment - plot1 - 10/07/14
+# Code to complete the first peer assignment - plot2 - 10/07/14
 
 #Set the location of the data to use
 fileurl<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -31,13 +31,14 @@ houseformat<-data.frame(DateTime=strptime(housedatakeep$NewCol, format="%d/%m/%Y
                         Sub1=as.numeric(as.character(housedatakeep$Sub_metering_1, dec=".")),
                         Sub2=as.numeric(as.character(housedatakeep$Sub_metering_2, dec=".")),
                         Sub3=as.numeric(as.character(housedatakeep$Sub_metering_3, dec="."))
-                        )
+)
+
 
 #Establish the file name and specific size for .png format
-png(filename = "plot1.png", width = 480, height = 480)
+png(filename = "plot2.png", width = 480, height = 480)
 
-##Create the histogram, set the colour and labels
-hist(houseformat$Active, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
+##Create the plot and set the format as line and define the labels
+plot(houseformat$DateTime, houseformat$Active, type = "l", xlab="", ylab="Global Active Power (kilowatts)")
 
 #Close off process
 dev.off()
