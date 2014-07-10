@@ -42,7 +42,7 @@ par(mfrow=c(2,2))
 
 #######PLOT1
 ##Create the plot and set the format as line and define the labels
-plot(houseformat$DateTime, houseformat$Active, type = "l", xlab="", ylab="Global Active Power (kilowatts)")
+plot(houseformat$DateTime, houseformat$Active, type = "l", xlab="", ylab="Global Active Power")
 
 #######PLOT2
 plot(houseformat$DateTime, houseformat$Voltage, type = "l", xlab="datetime", ylab="Voltage")
